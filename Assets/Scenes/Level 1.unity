@@ -948,25 +948,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded02eb1d75ded54181030a960271aa3, type: 3}
---- !u!1 &2057704010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1515857221302619543, guid: f4d21537846fa7447bd23bca8c71c805,
-    type: 3}
-  m_PrefabInstance: {fileID: 5253250627684919936}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2057704011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057704010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e532eba6711b5342ab0d2fe5d903883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakableBlocks: 0
 --- !u!1001 &2102113496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1155,7 +1136,7 @@ PrefabInstance:
     - target: {fileID: 1990267492737311481, guid: 8eb310166e9e10340ae3979836796f26,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1990267492737311481, guid: 8eb310166e9e10340ae3979836796f26,
         type: 3}
@@ -1224,7 +1205,7 @@ PrefabInstance:
     - target: {fileID: 2474777106147307261, guid: f3564376ed3dea641b59495fbb3a1c30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2474777106147307261, guid: f3564376ed3dea641b59495fbb3a1c30,
         type: 3}
@@ -1422,7 +1403,7 @@ PrefabInstance:
     - target: {fileID: 8613032477425888617, guid: f4d21537846fa7447bd23bca8c71c805,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8613032477425888617, guid: f4d21537846fa7447bd23bca8c71c805,
         type: 3}
@@ -1491,7 +1472,7 @@ PrefabInstance:
     - target: {fileID: 5255702377947770498, guid: 421ab1521eabf124c90d8e9e97e07482,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5255702377947770498, guid: 421ab1521eabf124c90d8e9e97e07482,
         type: 3}
@@ -1560,7 +1541,7 @@ PrefabInstance:
     - target: {fileID: 6961643309809372251, guid: 7f90ac972f36b7e4bace393d62c48b3e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6961643309809372251, guid: 7f90ac972f36b7e4bace393d62c48b3e,
         type: 3}
