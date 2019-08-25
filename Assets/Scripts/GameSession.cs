@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameStatus : MonoBehaviour
+public class GameSession : MonoBehaviour
 {
 
     // Configuration parameters
@@ -16,7 +16,7 @@ public class GameStatus : MonoBehaviour
 
     private void Awake()
     {
-        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
             gameObject.SetActive(false);
@@ -43,6 +43,12 @@ public class GameStatus : MonoBehaviour
     {
         currentScore += pointsPerBlockDestroyed;
         scoreText.text = currentScore.ToString();
+    }
+
+    public void ResetGame()
+    {
+        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
 
