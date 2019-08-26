@@ -11,18 +11,28 @@ public class Block : MonoBehaviour
 
     // Cached reference
     Level level;
-    GameSession gameStatus;
+    //GameSession gameStatus;
 
     private void Start()
     {
+        CountBreakableBlocks();
+    }
+
+    private void CountBreakableBlocks()
+    {
         level = FindObjectOfType<Level>();
-        level.CountBreakableBlocks();
-        gameStatus = FindObjectOfType<GameSession>();
+        if (tag == "Breakable")
+        {
+            level.CountBlocks();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyBlock();
+        if (tag == "Breakable")
+        {
+            DestroyBlock();
+        }   
     }
 
     private void DestroyBlock()
@@ -36,7 +46,7 @@ public class Block : MonoBehaviour
     private void PlayBlockDestroySFX()
     {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
-        gameStatus.AddToScore();
+        FindObjectOfType<GameSession>().AddToScore();
     }
 
     private void TriggerSparklesVFX()
