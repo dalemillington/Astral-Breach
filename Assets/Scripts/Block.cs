@@ -8,9 +8,9 @@ public class Block : MonoBehaviour
 
     // Configuration parameters
     [SerializeField] AudioClip breakSound;
-    [SerializeField] GameObject blockSparklesVFX;
     [SerializeField] int maxHits;
     [SerializeField] Sprite[] hitSprites;
+    [SerializeField] GameObject[] blockImpactVFX;
 
     // Cached reference
     Level level;
@@ -44,6 +44,7 @@ public class Block : MonoBehaviour
     {
         int spriteIndex = timesHit - 1;
         GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        TriggerEchoesVFX();
     }
 
     private void HandleHit()
@@ -64,7 +65,7 @@ public class Block : MonoBehaviour
         PlayBlockDestroySFX();
         Destroy(gameObject);
         level.BlockDestroyed();
-        TriggerSparklesVFX();
+        TriggerEchoesVFX();
     }
 
     private void PlayBlockDestroySFX()
@@ -73,9 +74,10 @@ public class Block : MonoBehaviour
         FindObjectOfType<GameSession>().AddToScore();
     }
 
-    private void TriggerSparklesVFX()
+    private void TriggerEchoesVFX()
     {
-        GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
-        Destroy(sparkles, 1f);
+        int blockVFXIndex = timesHit - 1;
+        GameObject echo = Instantiate(blockImpactVFX[blockVFXIndex], transform.position, transform.rotation);
+        Destroy(echo, 1f);
     }
 }
